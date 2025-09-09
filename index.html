@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appliance Energy Consumption - Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding" role="button" id="powerLogoBtn" tabindex="0" aria-label="Go to home">
+      <img id="powerLogo" src="assets/PowerIcon.png" alt="Power logo" />
+    </div>
+
+    <nav class="topnav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="televisions">Televisions</a></li>
+        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-status" aria-live="polite" id="navStatus">You are on: Home</div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HOME -->
+    <section id="home" class="page active" aria-hidden="false">
+      <h1>Home — Appliance Energy Consumption (AU)</h1>
+      <p class="lead">Placeholder content about appliance energy consumption in the Australian market. Replace with your researched data and citations.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Why it matters</h3>
+          <p>Appliance energy consumption contributes to household electricity bills. Small behavioral or appliance changes can reduce kWh usage.</p>
+        </article>
+
+        <article class="card">
+          <h3>Typical units</h3>
+          <p>Power measured in <strong>Watts (W)</strong>. Energy measured in <strong>kWh</strong>. Annual consumption is often shown in kWh/year.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TELEVISIONS -->
+    <section id="televisions" class="page" aria-hidden="true">
+      <h1>Televisions — Sample Data</h1>
+      <p>Interactive sample data for TV energy usage (placeholder). Use real Australian data for final submission.</p>
+
+      <canvas id="tvChart" width="600" height="300" aria-label="Television energy consumption chart"></canvas>
+
+      <table class="data-table">
+        <caption>Sample TV power & annual usage (placeholder)</caption>
+        <thead>
+          <tr><th>Appliance</th><th>Typical Power (W)</th><th>Est. kWh/year*</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>32" LED TV</td><td>30</td><td>50</td></tr>
+          <tr><td>50" LED TV</td><td>80</td><td>120</td></tr>
+          <tr><td>55" OLED TV</td><td>100</td><td>150</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">*Sample values. Replace with accurate Australian market figures from official sources.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page" aria-hidden="true">
+      <h1>About Us</h1>
+      <p>This demo site was built to show HTML / CSS / JavaScript and GitHub hosting using Vercel.</p>
+
+      <h2>Development notes</h2>
+      <p>We used GitHub for version control and GitHub Copilot to assist in generating code snippets — review README for Copilot reflection.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      &copy; <span id="year"></span> Jayne Wong — Built for T01(a). 
+      <span class="genai">GenAI assistance: <em>GitHub Copilot</em> (if used).</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

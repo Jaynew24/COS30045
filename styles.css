@@ -1,0 +1,115 @@
+:root{
+  --brand: #2a9d8f;     /* replace with your logo color */
+  --accent: #264653;
+  --muted: #6c757d;
+  --bg: #f7f9f8;
+  --card-bg: #ffffff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#1f2326;
+  line-height:1.45;
+}
+
+.site-header{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:0.6rem 1rem;
+  background:linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
+  border-bottom: 2px solid rgba(0,0,0,0.04);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.branding img{
+  height:44px;
+  width:44px;
+  object-fit:contain;
+  cursor:pointer;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.topnav ul{
+  display:flex;
+  list-style:none;
+  padding:0;
+  margin:0;
+  gap:0.25rem;
+}
+
+.topnav a{
+  display:inline-block;
+  text-decoration:none;
+  padding:0.5rem 0.9rem;
+  border-radius:8px;
+  color:var(--accent);
+  font-weight:600;
+  transition:all 150ms ease;
+}
+
+.topnav a:hover{
+  transform:translateY(-2px);
+  background:rgba(42,157,143,0.08);
+}
+
+.topnav a.active{
+  background:var(--brand);
+  color:white;
+  box-shadow: 0 6px 14px rgba(42,157,143,0.18);
+}
+
+.nav-status{
+  margin-left:auto;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+main{
+  padding:1.2rem;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* pages */
+.page{ display:none; padding:1rem 0; }
+.page.active{ display:block; }
+
+.cards{ display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
+.card{
+  background:var(--card-bg);
+  padding:1rem;
+  border-radius:10px;
+  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+  flex:1 1 260px;
+  min-width:220px;
+}
+
+.data-table{ width:100%; border-collapse:collapse; margin-top:1rem; background:var(--card-bg); border-radius:8px; overflow:hidden;}
+.data-table th, .data-table td{ padding:0.6rem 0.8rem; text-align:left; border-bottom:1px solid #eef2f3;}
+.data-table thead th{ background:linear-gradient(90deg, rgba(42,157,143,0.08), rgba(38,70,83,0.04));}
+
+.note{ font-size:0.9rem; color:var(--muted); }
+
+/* footer */
+.site-footer{
+  margin-top:2rem;
+  padding:1rem;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid rgba(0,0,0,0.04);
+  font-size:0.95rem;
+}
+
+/* responsive */
+@media (max-width:720px){
+  .topnav ul{ gap:0.3rem }
+  .nav-status{ display:none; }
+  .cards{ flex-direction:column; }
+}
