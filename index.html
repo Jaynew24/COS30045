@@ -1,88 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Appliance Energy Consumption - Demo</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Energy Consumption</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="branding" role="button" id="powerLogoBtn" tabindex="0" aria-label="Go to home">
-      <img id="powerLogo" src="assets/PowerIcon.png" alt="Power logo" />
-    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">PowerSave</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active" onclick="showPage('home'); return false;">Home</a></li>
+                    <li><a href="#" onclick="showPage('televisions'); return false;">Televisions</a></li>
+                    <li><a href="#" onclick="showPage('about'); return false;">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <nav class="topnav" role="navigation" aria-label="Main navigation">
-      <ul>
-        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-page="televisions">Televisions</a></li>
-        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
-      </ul>
-    </nav>
+    <main class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Save Energy, Save Money</h1>
+                <p>Discover how much energy your appliances use and learn practical tips to reduce your electricity bills and environmental impact.</p>
+            </div>
+            
+            <h2 class="section-title">Popular Appliances</h2>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Televisions</h3>
+                        <p>Modern TVs vary greatly in energy consumption. LED TVs are more efficient than Plasma or OLED models.</p>
+                        <p>Average consumption: 80-400 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kitchen Appliances</h3>
+                        <p>Refrigerators, ovens, and dishwashers are among the highest energy consumers in most households.</p>
+                        <p>Average consumption: 500-2000 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cooling & Heating</h3>
+                        <p>Air conditioners and heaters account for approximately 40% of household energy use in Australia.</p>
+                        <p>Average consumption: 1000-5000 watts</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Understanding Energy Consumption in Australia</h2>
+                <p>Australian households spend an average of $1,500 per year on electricity, with appliances accounting for about 30% of this cost. With rising energy prices, understanding how to optimize your appliance usage can lead to significant savings.</p>
+                <p>Our website provides practical information to help you make informed decisions about your appliance usage and purchases.</p>
+            </div>
+        </div>
+        
+        <!-- Televisions Page -->
+        <div id="televisions" class="page">
+            <h2 class="section-title">Television Energy Consumption</h2>
+            
+            <div class="energy-info">
+                <h2>TV Energy Usage Guide</h2>
+                <p>Televisions have evolved significantly in recent years, with energy efficiency varying greatly between different technologies and models.</p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img" style="background-color: #876942;">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>LED TVs</h3>
+                        <p>Most energy-efficient TV technology available today. Uses up to 50% less power than LCD TVs of similar size.</p>
+                        <p>Average consumption: 50-100 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img" style="background-color: #f3a528;">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>OLED TVs</h3>
+                        <p>Superior picture quality but higher energy consumption than LED, especially with brighter content.</p>
+                        <p>Average consumption: 100-200 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img" style="background-color: #fae79b;">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>QLED TVs</h3>
+                        <p>Quantum dot technology offers vibrant colors with moderate energy consumption between LED and OLED.</p>
+                        <p>Average consumption: 70-150 watts</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Energy Saving Tips for TVs</h2>
+                <ul>
+                    <li>Enable automatic brightness adjustment based on room lighting</li>
+                    <li>Turn off rather than leaving on standby when not in use</li>
+                    <li>Choose a size appropriate for your viewing distance - larger screens consume more power</li>
+                    <li>Look for high energy star ratings when purchasing new TVs</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- About Us Page -->
+        <div id="about" class="page">
+            <h2 class="section-title">About Us</h2>
+            
+            <div class="energy-info">
+                <h2>Our Mission</h2>
+                <p>We are a team of energy efficiency advocates based in Australia. Our goal is to provide consumers with accurate, practical information about appliance energy consumption to help reduce both electricity bills and environmental impact.</p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img" style="background-color: #876942;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Goals</h3>
+                        <p>To educate Australian consumers about energy consumption of household appliances and promote energy-efficient choices.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img" style="background-color: #f3a528;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Data</h3>
+                        <p>We gather information from manufacturer specifications, laboratory tests, and real-world usage studies to provide accurate consumption data.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img" style="background-color: #fae79b;">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Values</h3>
+                        <p>We believe in providing unbiased, factual information to help consumers make informed decisions without commercial influence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Contact Us</h2>
+                <p>If you have questions about appliance energy consumption or suggestions for our website, please reach out to us at info@applianceenergy.org.au</p>
+            </div>
+        </div>
+    </main>
 
-    <div class="nav-status" aria-live="polite" id="navStatus">You are on: Home</div>
-  </header>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2023</span> Appliance Energy Consumption | Created by [Your Name]</p>
+            <p>GenAI Acknowledgement: This website was created with assistance from ChatGPT for code structure and content ideas.</p>
+        </div>
+    </footer>
 
-  <main id="mainContent">
-    <!-- HOME -->
-    <section id="home" class="page active" aria-hidden="false">
-      <h1>Home — Appliance Energy Consumption (AU)</h1>
-      <p class="lead">Placeholder content about appliance energy consumption in the Australian market. Replace with your researched data and citations.</p>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Why it matters</h3>
-          <p>Appliance energy consumption contributes to household electricity bills. Small behavioral or appliance changes can reduce kWh usage.</p>
-        </article>
-
-        <article class="card">
-          <h3>Typical units</h3>
-          <p>Power measured in <strong>Watts (W)</strong>. Energy measured in <strong>kWh</strong>. Annual consumption is often shown in kWh/year.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- TELEVISIONS -->
-    <section id="televisions" class="page" aria-hidden="true">
-      <h1>Televisions — Sample Data</h1>
-      <p>Interactive sample data for TV energy usage (placeholder). Use real Australian data for final submission.</p>
-
-      <canvas id="tvChart" width="600" height="300" aria-label="Television energy consumption chart"></canvas>
-
-      <table class="data-table">
-        <caption>Sample TV power & annual usage (placeholder)</caption>
-        <thead>
-          <tr><th>Appliance</th><th>Typical Power (W)</th><th>Est. kWh/year*</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>32" LED TV</td><td>30</td><td>50</td></tr>
-          <tr><td>50" LED TV</td><td>80</td><td>120</td></tr>
-          <tr><td>55" OLED TV</td><td>100</td><td>150</td></tr>
-        </tbody>
-      </table>
-
-      <p class="note">*Sample values. Replace with accurate Australian market figures from official sources.</p>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="page" aria-hidden="true">
-      <h1>About Us</h1>
-      <p>This demo site was built to show HTML / CSS / JavaScript and GitHub hosting using Vercel.</p>
-
-      <h2>Development notes</h2>
-      <p>We used GitHub for version control and GitHub Copilot to assist in generating code snippets — review README for Copilot reflection.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div>
-      &copy; <span id="year"></span> Jayne Wong — Built for T01(a). 
-      <span class="genai">GenAI assistance: <em>GitHub Copilot</em> (if used).</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
