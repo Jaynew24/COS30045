@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appliance Energy Consumption - Home</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerSave - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="PowerIcon.png" alt="Power Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="televisions.html">Televisions</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">PowerSave</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="televisions.html">Televisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Welcome to Appliance Energy Consumption</h1>
-    <p>This site explores energy efficiency of appliances in the Australian market.</p>
-    <p>Navigate through the pages to see insights on televisions and learn more about us.</p>
-  </main>
+    <main class="container">
+        <div class="page active">
+            <div class="hero">
+                <h1>Save Energy, Save Money</h1>
+                <p>Discover how much energy your appliances use and learn practical tips to reduce your electricity bills and environmental impact.</p>
+            </div>
+            
+            <h2 class="section-title">Popular Appliances</h2>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Televisions</h3>
+                        <p>Modern TVs vary greatly in energy consumption. LED TVs are more efficient than Plasma or OLED models.</p>
+                        <p>Average consumption: 80-400 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kitchen Appliances</h3>
+                        <p>Refrigerators, ovens, and dishwashers are among the highest energy consumers in most households.</p>
+                        <p>Average consumption: 500-2000 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cooling & Heating</h3>
+                        <p>Air conditioners and heaters account for approximately 40% of household energy use in Australia.</p>
+                        <p>Average consumption: 1000-5000 watts</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Understanding Energy Consumption in Australia</h2>
+                <p>Australian households spend an average of $1,500 per year on electricity, with appliances accounting for about 30% of this cost. With rising energy prices, understanding how to optimize your appliance usage can lead to significant savings.</p>
+                <p>Our website provides practical information to help you make informed decisions about your appliance usage and purchases.</p>
+            </div>
+        </div>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Your Name | Built with HTML, CSS, JS | GenAI used for assistance</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> Appliance Energy Consumption | Created by Jayne Wong</p>
+            <p>GenAI Acknowledgement: This website was created with assistance from ChatGPT for code structure and content ideas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

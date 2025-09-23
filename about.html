@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Appliance Energy Consumption</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerSave - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="PowerIcon.png" alt="Power Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="televisions.html">Televisions</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">PowerSave</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="televisions.html">Televisions</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <h1>About This Project</h1>
-    <p>This website was built as part of COS30045 Data Visualisation coursework.</p>
-    <p>It demonstrates how HTML, CSS, and JavaScript can be used to explore appliance energy consumption.</p>
-  </main>
+    <main class="container">
+        <div class="page active">
+            <h2 class="section-title">About Us</h2>
+            
+            <div class="energy-info">
+                <h2>Our Mission</h2>
+                <p>We are a team of energy efficiency advocates based in Australia. Our goal is to provide consumers with accurate, practical information about appliance energy consumption to help reduce both electricity bills and environmental impact.</p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img about-card-goals">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Goals</h3>
+                        <p>To educate Australian consumers about energy consumption of household appliances and promote energy-efficient choices.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img about-card-data">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Data</h3>
+                        <p>We gather information from manufacturer specifications, laboratory tests, and real-world usage studies to provide accurate consumption data.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img about-card-values">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Our Values</h3>
+                        <p>We believe in providing unbiased, factual information to help consumers make informed decisions without commercial influence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Contact Us</h2>
+                <p>If you have questions about appliance energy consumption or suggestions for our website, please reach out to us at info@applianceenergy.org.au</p>
+            </div>
+        </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name | Built with HTML, CSS, JS | GenAI used for assistance</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2023</span> Appliance Energy Consumption | Created by Jayne Wong</p>
+            <p>GenAI Acknowledgement: This website was created with assistance from ChatGPT for code structure and content ideas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

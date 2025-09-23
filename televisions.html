@@ -1,39 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Televisions - Appliance Energy Consumption</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerSave - Televisions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="PowerIcon.png" alt="Power Logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="televisions.html" class="active">Televisions</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">PowerSave</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="televisions.html" class="active">Televisions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <h1>Television Energy Consumption</h1>
-    <p>Explore the average power use of TVs by screen technology and size.</p>
-    <ul>
-      <li>LCD: 100–150W</li>
-      <li>LED: 60–120W</li>
-      <li>OLED: 90–130W</li>
-    </ul>
-    <p>Energy ratings in Australia help consumers identify efficient models.</p>
-  </main>
+    <main class="container">
+        <div class="page active">
+            <h2 class="section-title">Television Energy Consumption</h2>
+            
+            <div class="energy-info">
+                <h2>TV Energy Usage Guide</h2>
+                <p>Televisions have evolved significantly in recent years, with energy efficiency varying greatly between different technologies and models.</p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img tv-card-led">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>LED TVs</h3>
+                        <p>Most energy-efficient TV technology available today. Uses up to 50% less power than LCD TVs of similar size.</p>
+                        <p>Average consumption: 50-100 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img tv-card-oled">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>OLED TVs</h3>
+                        <p>Superior picture quality but higher energy consumption than LED, especially with brighter content.</p>
+                        <p>Average consumption: 100-200 watts</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img tv-card-qled">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>QLED TVs</h3>
+                        <p>Quantum dot technology offers vibrant colors with moderate energy consumption between LED and OLED.</p>
+                        <p>Average consumption: 70-150 watts</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chart Section -->
+            <div class="chart-row">
+                <div class="chart-container">
+                    <h3 class="chart-title">Energy Consumption by TV Type</h3>
+                    <canvas id="consumptionChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Annual Running Cost (4 hrs/day)</h3>
+                    <canvas id="costChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">TV Technology Market Share in Australia</h3>
+                <canvas id="marketChart"></canvas>
+            </div>
+            
+            <div class="energy-info">
+                <h2>Energy Saving Tips for TVs</h2>
+                <ul>
+                    <li>Enable automatic brightness adjustment based on room lighting</li>
+                    <li>Turn off rather than leaving on standby when not in use</li>
+                    <li>Choose a size appropriate for your viewing distance - larger screens consume more power</li>
+                    <li>Look for high energy star ratings when purchasing new TVs</li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name | Built with HTML, CSS, JS | GenAI used for assistance</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2023</span> Appliance Energy Consumption | Created by Jayne Wong</p>
+            <p>GenAI Acknowledgement: This website was created with assistance from ChatGPT for code structure and content ideas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="charts.js"></script>
 </body>
 </html>

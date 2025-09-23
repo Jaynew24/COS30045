@@ -1,52 +1,51 @@
-# COS30045
-Data Visualisation
+# Appliance Energy Consumption Website
 
-# Appliance Energy Consumption — Demo Website (T01(a))
+A clean, professional website showcasing energy consumption information for household appliances, with a design inspired by Apple's minimalist aesthetic.
 
-## What this is
-Small demo website to showcase HTML, CSS, JavaScript and Git/GitHub hosting. Single-file site that simulates three pages: Home, Televisions, About Us.
+## Project Structure
 
-## How to run locally
-1. Clone repo.
-2. Open `index.html` in a browser (double click or use Live Server extension in VS Code).
+- `index.html` - Home page with overview of appliance energy consumption
+- `televisions.html` - Detailed information about TV energy usage with interactive charts
+- `about.html` - Information about the website and its mission
+- `styles.css` - All styling for the website
+- `script.js` - JavaScript functionality for interactive elements
+- `README.md` - Project documentation
 
-## Deployment
-This project can be deployed on Vercel:
-1. Push your repository to GitHub (make it public).
-2. Log into https://vercel.com using your GitHub account.
-3. Click **New Project → Import Git Repository** → select this repo → Deploy.
-4. Vercel will give a live link: `https://your-project-name.vercel.app`.
+## JavaScript Usage Explanation
 
-## Git workflow (simple)
-- Make small commits:
-  - `git add .`
-  - `git commit -m "Add home layout and styles"`
-  - `git push`
+The JavaScript in this project serves several important functions:
 
-## GenAI / GitHub Copilot usage (required notes)
-I used GitHub Copilot to assist with:
-- Generating the basic `<header>`/navigation skeleton.
-- Suggesting the CSS structure and responsive grid for the cards.
-- A starter Chart.js configuration.
+### 1. Dynamic Content Updates
+- Updates the copyright year automatically in the footer
+- Handles navigation highlighting to show the current page
 
-**How I used Copilot (steps / prompts I gave it):**
-- "Create a responsive header with a logo and navigation"
-- "Provide a CSS variables theme and responsive card layout"
-- "Create a simple Chart.js bar chart for sample TV energy data"
+### 2. User Interaction Enhancements
+- Adds hover effects to navigation links for better user feedback
+- Implements smooth scrolling for anchor links
+- Creates a subtle header effect on scroll for visual appeal
 
-**What Copilot suggested (and what I changed):**
-- Copilot suggested `flex` layout — I kept it and adjusted spacing/contrast.
-- Copilot generated some CSS variables; I renamed them to match the project naming convention.
-- I manually rewrote the chart options for accessibility (ARIA, chart title).
+### 3. Page-Specific Functionality (televisions.html)
+- Renders interactive charts using Chart.js to visualize TV energy data
+- Displays consumption comparisons, cost trends, and market share
 
-**Reflection**
-Using Copilot sped up scaffolding and gave useful patterns. I carefully reviewed and edited all Copilot suggestions to ensure I understand them and to correct misfits (styles, color contrast, accessibility). I can explain and modify every line of code included in this project.
+### 4. Responsive Behavior
+- Enhances the user experience across different device sizes
+- Maintains functionality on both desktop and mobile devices
 
----
+## Design Philosophy
 
-## To do before submission
-- Replace placeholder TV data with verified Australian figures and include citations (in README or on the Televisions page).
-- Add `PowerIcon.png` in `assets/`.
-- Fill the About Us page with your project/author details.
+The website follows Apple's design principles:
+- Clean, minimalist aesthetic with ample white space
+- Consistent color palette using static colors instead of gradients
+- Typography-focused layout with clear hierarchy
+- Subtle animations and transitions for polished interactions
 
----
+## GenAI Usage Acknowledgement
+
+This project was developed with assistance from ChatGPT for:
+- Code structure and organization ideas
+- Initial implementation of interactive charts
+- Design inspiration and color scheme selection
+- Content organization and presentation approaches
+
+All code has been reviewed, understood, and customized to meet the specific requirements of the project.
