@@ -829,3 +829,45 @@ footer p {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
+/* Compact Storyboard Section */
+.storyboard-compact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e6e6ea;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 30px 0;
+}
+
+.storyboard-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.storyboard-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.storyboard-text {
+    font-size: 0.95rem;
+    color: #1d1d1f;
+}
+
+.storyboard-link {
+    color: #0071e3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.storyboard-link:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+.storyboard-link i {
+    font-size: 0.8rem;
+    margin-left: 4px;
+}
