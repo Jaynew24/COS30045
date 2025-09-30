@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerSave - Televisions</title>
+    <title>PowerSave - TV Energy Insights</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -20,7 +20,7 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="televisions.html" class="active">Televisions</a></li>
+                    <li><a href="televisions.html" class="active">TV Insights</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
@@ -29,86 +29,380 @@
 
     <main class="container">
         <div class="page active">
-            <h2 class="section-title">Television Energy Consumption</h2>
-            
-            <div class="energy-info">
-                <h2>TV Energy Usage Guide</h2>
-                <p>Televisions have evolved significantly in recent years, with energy efficiency varying greatly between different technologies and models.</p>
+            <!-- Story Introduction -->
+            <div class="story-intro">
+                <h1>The Hidden Cost of Your TV: Energy Insights for Australian Households</h1>
+                <p class="intro-text">Australian households waste over <strong>$50 million annually</strong> on inefficient television energy consumption. Discover how smart choices can save you money and reduce environmental impact.</p>
             </div>
-            
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-img tv-card-led">
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>LED TVs</h3>
-                        <p>Most energy-efficient TV technology available today. Uses up to 50% less power than LCD TVs of similar size.</p>
-                        <p>Average consumption: 50-100 watts</p>
-                    </div>
+
+            <!-- Key Insight Summary -->
+            <div class="key-insights">
+                <div class="insight-card">
+                    <div class="insight-icon">💰</div>
+                    <h3>Cost Saving</h3>
+                    <p>Energy-efficient TVs can save up to $100 per year</p>
                 </div>
-                
-                <div class="card">
-                    <div class="card-img tv-card-oled">
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>OLED TVs</h3>
-                        <p>Superior picture quality but higher energy consumption than LED, especially with brighter content.</p>
-                        <p>Average consumption: 100-200 watts</p>
-                    </div>
+                <div class="insight-card">
+                    <div class="insight-icon">🌱</div>
+                    <h3>Environmental Impact</h3>
+                    <p>Reduce CO2 emissions by 150kg annually per household</p>
                 </div>
-                
-                <div class="card">
-                    <div class="card-img tv-card-qled">
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>QLED TVs</h3>
-                        <p>Quantum dot technology offers vibrant colors with moderate energy consumption between LED and OLED.</p>
-                        <p>Average consumption: 70-150 watts</p>
-                    </div>
+                <div class="insight-card">
+                    <div class="insight-icon">⚡</div>
+                    <h3>Energy Usage</h3>
+                    <p>TVs account for 8% of average household electricity use</p>
                 </div>
             </div>
-            
-            <!-- Chart Section -->
-            <div class="chart-row">
-                <div class="chart-container">
-                    <h3 class="chart-title">Energy Consumption by TV Type</h3>
-                    <canvas id="consumptionChart"></canvas>
+
+            <!-- Chart 1: Technology Frequency -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>1. TV Screen Technologies in Australian Market</h2>
+                    <p class="section-subtitle">Which technologies are most common?</p>
                 </div>
                 
-                <div class="chart-container">
-                    <h3 class="chart-title">Annual Running Cost (4 hrs/day)</h3>
-                    <canvas id="costChart"></canvas>
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q1.png" alt="TV Screen Technologies Bar Chart" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li><strong>LED</strong> dominates with 158 models (62.2%)</li>
+                                <li><strong>LCD</strong> has 79 models (31.1%)</li>
+                                <li><strong>OLED</strong> represents 17 models (6.7%)</li>
+                                <li>LED still dominates, but LCD adoption is growing, appealing to buyers seeking premium picture quality</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> LED technology dominates with over 60% market share, while LCD adoption is growing among consumers seeking premium picture quality. OLED remains a niche but premium option.</p>
+                </div>
+            </section>
+
+            <!-- Chart 2: Power Consumption by Technology -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>2. Power Consumption by Screen Technology</h2>
+                    <p class="section-subtitle">Which technology uses the least power?</p>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q4 screentech power.png" alt="Power Consumption by Screen Technology" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Efficiency Analysis</h4>
+                            <ul>
+                                <li><strong>LCD</strong> is most efficient at 79.43W average</li>
+                                <li><strong>LED</strong> uses 53% more power than LCD</li>
+                                <li><strong>QLED</strong> consumes 66% more than LCD</li>
+                                <li>On average, LCDs are the most energy-efficient, while OLEDs consume more but deliver higher display quality</li>
+                            </ul>
+                        </div>
+                        <div class="data-table">
+                            <h4>Power Consumption Data</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Technology</th>
+                                        <th>Avg Power (W)</th>
+                                        <th>Annual Cost*</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LCD</td>
+                                        <td>79.43W</td>
+                                        <td>$35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LED</td>
+                                        <td>121.6W</td>
+                                        <td>$53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>QLED</td>
+                                        <td>132.01W</td>
+                                        <td>$58</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="table-note">*Based on 4 hours daily usage at $0.30/kWh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> LCD technology is the most energy-efficient, consuming significantly less power than LED and QLED alternatives, making it the best choice for energy-conscious consumers.</p>
+                </div>
+            </section>
+
+            <!-- Chart 3: Screen Size Distribution -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>3. TV Screen Sizes in Australian Market</h2>
+                    <p class="section-subtitle">What sizes are most common?</p>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q2 screensize.png" alt="TV Screen Size Distribution" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Size Popularity</h4>
+                            <ul>
+                                <li><strong>Large (55-75")</strong> is most popular with 1,669 models (39.4%)</li>
+                                <li><strong>Medium (32-55")</strong> represents 1,182 models (27.9%)</li>
+                                <li><strong>Small (<32")</strong> accounts for 1,176 models (27.8%)</li>
+                                <li><strong>Extra Large (>75")</strong> represents 289 models (6.8%)</li>
+                                <li>Most TVs sold in Australia are mid-sized (55–75 inches), balancing value, viewing experience and efficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> Large screens (55-75") dominate the Australian market with nearly 40% share, indicating consumer preference for bigger viewing experiences that balance size with efficiency.</p>
+                </div>
+            </section>
+
+            <!-- Chart 4: Screen Size vs Power -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>4. Screen Size vs Power Consumption</h2>
+                    <p class="section-subtitle">How does screen size affect power use?</p>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q5 screensize power.png" alt="Screen Size vs Power Consumption Scatter Plot" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Power Impact</h4>
+                            <ul>
+                                <li>Power consumption increases exponentially with screen size</li>
+                                <li>16" TVs use ~15W, while 100" TVs exceed 300W</li>
+                                <li>Biggest jump occurs between 50-65" size range</li>
+                                <li>Bigger screens generally consume more power, but efficiency depends heavily on technology type</li>
+                            </ul>
+                        </div>
+                        <div class="data-table">
+                            <h4>Size vs Power Data (Sample)</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Screen Size</th>
+                                        <th>Avg Power (W)</th>
+                                        <th>Power Range</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>32"</td>
+                                        <td>29.6W</td>
+                                        <td>Low consumption</td>
+                                    </tr>
+                                    <tr>
+                                        <td>55"</td>
+                                        <td>96.9W</td>
+                                        <td>Moderate</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65"</td>
+                                        <td>134.2W</td>
+                                        <td>High</td>
+                                    </tr>
+                                    <tr>
+                                        <td>75"</td>
+                                        <td>171.9W</td>
+                                        <td>Very High</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100"</td>
+                                        <td>303.6W</td>
+                                        <td>Extreme</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> Screen size has an exponential relationship with power consumption. A large LCD can be more efficient than a smaller OLED, emphasizing that technology choice is as important as size.</p>
+                </div>
+            </section>
+
+            <!-- Chart 5: Brand Market Share -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>5. TV Brands Market Share</h2>
+                    <p class="section-subtitle">Which brands dominate the Australian market?</p>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q3 brand.png" alt="Top 10 TV Brands Market Share" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Brand Dominance</h4>
+                            <ul>
+                                <li><strong>Samsung Electronics</strong> leads with 859 models</li>
+                                <li><strong>Kogan</strong> follows with 702 models</li>
+                                <li><strong>LG</strong> holds 682 models</li>
+                                <li>Samsung Electronics, Kogan, and LG offer the widest range of TV models</li>
+                            </ul>
+                        </div>
+                        <div class="data-table">
+                            <h4>Top 3 Brand Market Data</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Brand</th>
+                                        <th>Models Available</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Samsung Electronics</td>
+                                        <td>859</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kogan</td>
+                                        <td>702</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG</td>
+                                        <td>682</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> Samsung Electronics dominates the Australian TV market with the widest model range, while Kogan has emerged as a strong second player, competing closely with established brand LG.</p>
+                </div>
+            </section>
+
+            <!-- Chart 6: Star Rating vs Screen Size -->
+            <section class="chart-section">
+                <div class="section-header">
+                    <h2>6. Energy Star Rating vs Screen Size</h2>
+                    <p class="section-subtitle">Do larger TVs mean worse energy ratings?</p>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <img src="assets/q6 screensize star rating.png" alt="Screen Size vs Star Rating Scatter Plot" style="width: 100%; height: auto; max-width: 600px;">
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <div class="insight-box">
+                            <h4>Rating Patterns</h4>
+                            <ul>
+                                <li>Star ratings are scattered across all screen sizes</li>
+                                <li>Smaller screens have ratings ranging from 3-7 stars</li>
+                                <li>Larger screens also show wide rating variation (3-7 stars)</li>
+                                <li>Screen size alone doesn't determine energy efficiency rating</li>
+                            </ul>
+                        </div>
+                        <div class="data-table">
+                            <h4>Star Rating Distribution by Size</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Screen Size Range</th>
+                                        <th>Rating Range</th>
+                                        <th>Pattern</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Small (<55")</td>
+                                        <td>3-7 stars</td>
+                                        <td>Wide variation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medium (55-65")</td>
+                                        <td>2-6 stars</td>
+                                        <td>Lowest ratings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Large (65-75")</td>
+                                        <td>4-7 stars</td>
+                                        <td>Highest ratings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extra Large (>75")</td>
+                                        <td>3-7 stars</td>
+                                        <td>Wide variation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <p><strong>Conclusion:</strong> Energy star ratings vary widely across all screen sizes, with mid-sized TVs (55-65") showing the most inconsistent efficiency. Screen size alone is not a reliable predictor of energy efficiency.</p>
+                </div>
+            </section>
+
+            <!-- Actionable Recommendations -->
+            <div class="action-section">
+                <h2>Take Action: Reduce Your TV Energy Use</h2>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <h3>🔍 Check Energy Rating</h3>
+                        <p>Always look for TVs with 4-star or higher energy rating</p>
+                    </div>
+                    <div class="action-card">
+                        <h3>💡 Enable Eco Mode</h3>
+                        <p>Use automatic brightness adjustment features</p>
+                    </div>
+                    <!-- <div class="action-card">
+                        <h3>🔌 Avoid Standby</h3>
+                        <p>Turn off at the wall when not in use</p>
+                    </div> -->
+                    <div class="action-card">
+                        <h3>📏 Right Size Matters</h3>
+                        <p>Choose appropriate screen size for your viewing distance</p>
+                    </div>
                 </div>
             </div>
-            
-            <!-- <div class="chart-container piechart">
-                <h3 class="chart-title">TV Technology Market Share in Australia</h3>
-                <canvas id="marketChart"></canvas>
-            </div> -->
-            
-            <div class="energy-info">
-                <h2>Energy Saving Tips for TVs</h2>
-                <ul>
-                    <li>Enable automatic brightness adjustment based on room lighting</li>
-                    <li>Turn off rather than leaving on standby when not in use</li>
-                    <li>Choose a size appropriate for your viewing distance - larger screens consume more power</li>
-                    <li>Look for high energy star ratings when purchasing new TVs</li>
-                </ul>
+
+            <!-- Data Source Information -->
+            <div class="data-source">
+                <h3>About Our Data</h3>
+                <p>This analysis is based on Australian Government Energy Rating Data for household appliances which contains information about the energy consumption of televisions sold in Australia.</p>
             </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year">2023</span> Appliance Energy Consumption | Created by Jayne Wong</p>
+            <p>&copy; <span id="current-year">2025</span> Appliance Energy Consumption | Created by [Your Name]</p>
             <p>GenAI Acknowledgement: This website was created with assistance from ChatGPT for code structure and content ideas.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="charts.js"></script>
+    <script src="data-story.js"></script>
 </body>
 </html>
